@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: var(--font-chakra, 'Chakra Petch', sans-serif);
+  --font-goofy: var(--font-chakra, 'Chakra Petch', sans-serif);
+  --font-bouncy: var(--font-outfit, 'Outfit', -apple-system, sans-serif);
+  --font-sans: var(--font-outfit, 'Outfit', -apple-system, sans-serif);
+  --font-mono: var(--font-mono, 'JetBrains Mono', monospace);
+}
+
+body {
+  background-color: #08090C;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #FF3366;
+  color: #FFFFFF;
+}
+
+/* Goofy Cartoon & Arcade Patterns */
+.bg-arcade-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 242, 254, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 51, 102, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.bg-comic-dots {
+  background-image: radial-gradient(rgba(255, 215, 0, 0.12) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+/* Goofy Tilt & Wobble Classes */
+.tilt-left {
+  transform: rotate(-1.5deg);
+}
+
+.tilt-right {
+  transform: rotate(1.5deg);
+}
+
+.hover-wobble:hover {
+  animation: wobble 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes wobble {
+  0% { transform: rotate(-2deg) scale(1.02); }
+  100% { transform: rotate(2deg) scale(1.02); }
+}
+
+/* Crisp Comic & Arcade Text Outlines (High Contrast & Legible) */
+.text-stroke-black-1 {
+  -webkit-text-stroke: 1px #000000;
+}
+
+.text-stroke-black-2 {
+  -webkit-text-stroke: 2px #000000;
+}
+
+.text-stroke-black-3 {
+  -webkit-text-stroke: 3px #000000;
+}
+
+.text-shadow-arcade {
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.text-shadow-arcade-lg {
+  text-shadow: 4px 4px 0px #000000, 2px 2px 0px #000000;
+}
+
+.text-shadow-arcade-cyan {
+  text-shadow: 3px 3px 0px #000000, 0 0 12px rgba(0, 242, 254, 0.4);
+}
+
+.text-shadow-arcade-emerald {
+  text-shadow: 3px 3px 0px #000000, 0 0 12px rgba(0, 255, 135, 0.4);
+}
+
+.text-shadow-arcade-gold {
+  text-shadow: 3px 3px 0px #000000, 0 0 12px rgba(255, 215, 0, 0.4);
+}
+
+/* Custom Goofy Neon Glows */
+.drop-shadow-goofy-cyan {
+  filter: drop-shadow(4px 4px 0px #00F2FE);
+}
+
+.drop-shadow-goofy-pink {
+  filter: drop-shadow(4px 4px 0px #FF3366);
+}
+
+.drop-shadow-goofy-yellow {
+  filter: drop-shadow(4px 4px 0px #FFD700);
+}
+
+.drop-shadow-goofy-emerald {
+  filter: drop-shadow(4px 4px 0px #00FF87);
+}
+
+/* Cartoon Arcade Chunky Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08090C;
+  border-left: 2px solid #161B22;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00F2FE;
+  border-radius: 9999px;
+  border: 2px solid #08090C;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF3366;
+}
